@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import QrReader from 'react-qr-reader'
 
@@ -12,6 +13,10 @@ const MainPage = () => {
     console.log(err);
   }
 
+  const sendQr = () => {
+    axios.post('https://httpbin.org/anything', result)
+  }
+
   return(
     <div>
       <div style={{width: '300px'}}>
@@ -23,6 +28,7 @@ const MainPage = () => {
       </QrReader>
     </div>
     <div>
+      <button onClick={sendQr}>SEND DATA</button>
       {result}
     </div>
     </div>
