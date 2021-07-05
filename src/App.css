@@ -22,6 +22,14 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  position: relative;
+}
+.line {
+  position: absolute;
+  width: 500px;
+  height: 5px;
+  border-top: 1px solid red;
+  z-index: 1;
 }
 
 .App-link {
